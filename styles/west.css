@@ -148,7 +148,7 @@
 }
 
 #code-small {
-  display: none;
+  display: grid;
   gap: 2px;
   grid-template-columns: repeat(5, 8px);
   inset: 0;
@@ -156,11 +156,24 @@
   position: absolute;
   z-index: 2;
   height: 12px;
-  width: 5px
+  width: 5px;
+
+  [id^=code-small] {
+    height: 16px;
+    width: 8px;
+  }
 }
 
-:has(#poster:checked) & {
-  display: grid
+#code-large {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(5, 8px);
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  z-index: 2;
+  height: 12px;
+  width: 5px;
 }
 
 .code {
@@ -269,10 +282,15 @@
 #image_west_safe_open,
 #image_west_safe_open_zoom,
 [for=collect-key] {
-  display: block
+  display: none;
 }
 
 [popovertarget=west-safe-zoomedin] {
+  left: 468px;
+  top: 119px;
+
+  /* checked
   left: 451px;
-  top: 117px
+  top: 117px;
+   */
 }

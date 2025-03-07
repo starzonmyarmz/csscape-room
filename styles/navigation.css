@@ -16,8 +16,8 @@
 .east,
 .west {
   padding: 4px;
+  place-content: center;
   pointer-events: all;
-  position: absolute;
   top: 50%;
   translate: 0 -50%;
   width: 36px;
@@ -27,6 +27,10 @@
 
 .east {
   right: 4px
+}
+
+.west {
+  left: 4px
 }
 
 input[name=direction] + label {
@@ -41,7 +45,7 @@ input[name=direction] + label {
 :has(#sw:checked) :is([for=ew], [for=ee]),
 :has(#we:checked) :is([for=nw], [for=ne]),
 :has(#ww:checked) :is([for=sw], [for=se]) {
-  display: block
+  display: grid
 }
 
 #east,

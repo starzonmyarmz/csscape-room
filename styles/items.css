@@ -1,16 +1,14 @@
 #items {
-  align-items: center;
   border: 0;
-  display: none;
   gap: 4px;
-  padding-top: 8px;
-  position: relative;
-  height: 48px;
-  place-items: center;
+  margin-top: 4px;
 
   label {
     display: none;
+    height: 48px;
+    place-content: center;
     position: revert;
+    width: 48px;
   }
 
   :has(#start:checked) & {
@@ -18,6 +16,7 @@
   }
 }
 
+:has(#equip-nothing:checked) [for=equip-nothing],
 :has(#equip-dvd:checked) [for=equip-dvd],
 :has(#equip-hammer:checked) [for=equip-hammer],
 :has(#equip-key:checked) [for=equip-key],
