@@ -1,0 +1,27 @@
+#game {
+  display: grid;
+  position: relative
+}
+
+#room {
+  color: var(--color-midnight);
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 640px;
+  z-index: 1
+}
+
+#shade {
+  background: var(--color-midnight);
+  display: none;
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  position: absolute;
+  z-index: calc(infinity);
+
+  :has(#light-off:checked) & {
+    display: block;
+  }
+}

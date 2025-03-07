@@ -1,0 +1,73 @@
+#vent-north {
+  position: absolute;
+  left: 472px;
+  top: 296px
+}
+
+#vent-south {
+  position: absolute;
+  left: 50px;
+  top: 296px
+}
+
+#vent-north-zoom,
+#vent-south-zoom {
+  display: none
+}
+
+[for=vent-north-unscrewed],
+[for=vent-south-unscrewed] {
+  display: none;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+
+  :has(#equip-screwdriver:checked) & {
+    display: block;
+  }
+}
+
+:has(#vent-south-unscrewed:checked) {
+
+  #vent-south > img,
+  [for=vent-south-unscrewed] {
+    display: none;
+  }
+
+  #vent-south-zoom {
+    display: block;
+  }
+}
+
+:has(#vent-north-unscrewed:checked) {
+
+  #vent-north > img,
+  [for=vent-north-unscrewed] {
+    display: none;
+  }
+
+  #vent-north-zoom {
+    display: block;
+  }
+}
+
+[for=collect-hammer] {
+  left: 250px;
+  top: 116px;
+}
+
+#vent-north-zoomedin #image_vent_zoom {
+  display: none;
+}
+
+:has(#collect-hammer:checked) {
+
+  [for=collect-hammer],
+  #image_vent_zoom_hammer {
+    display: none;
+  }
+
+  #vent-north-zoomedin #image_vent_zoom {
+    display: block;
+  }
+}

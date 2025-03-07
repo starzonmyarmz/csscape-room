@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>CSScape Room</title>
+
+  <link rel="stylesheet" href="./styles/vars.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/east.css">
+  <link rel="stylesheet" href="./styles/items.css">
+  <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/navigation.css">
+  <link rel="stylesheet" href="./styles/north.css">
+  <link rel="stylesheet" href="./styles/over.css">
+  <link rel="stylesheet" href="./styles/south.css">
+  <link rel="stylesheet" href="./styles/title.css">
+  <link rel="stylesheet" href="./styles/vent.css">
+  <link rel="stylesheet" href="./styles/west.css">
+</head>
+
+<body>
+  <main id="game">
+    {% include "navigation.njk" %}
+
+    <div id="room">
+      <div id="sourth-wall-clue">4 RED</div>
+      <div id="shade"></div>
+
+      {% include "title.njk" %}
+      {% include "north.njk" %}
+      {% include "east.njk" %}
+      {% include "south.njk" %}
+      {% include "west.njk" %}
+      {% include "over.njk" %}
+    </div>
+
+    {% include "items.njk" %}
+  </main>
+</body>
+</html>

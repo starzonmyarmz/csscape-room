@@ -1,0 +1,20 @@
+#title {
+  background: var(--color-midnight);
+  z-index: calc(infinity);
+
+  h1 {
+    color: #fff;
+    font-size: 64px;
+    font-weight: 700;
+  }
+
+  [for="start"] {
+    background: var(--color-green);
+    color: #fff;
+    display: inline-block;
+  }
+
+  :has(#start:checked) & {
+    display: none;
+  }
+}

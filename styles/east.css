@@ -1,0 +1,350 @@
+[id^=books-] {
+  align-items: end;
+  display: flex;
+  position: absolute
+}
+
+#books-top {
+  left: 349px;
+  top: 48px
+}
+
+#books-middle {
+  left: 404px;
+  top: 120px
+}
+
+#books-bottom {
+  left: 352px;
+  top: 200px
+}
+
+.stacked {
+  display: flex;
+  flex-direction: column
+}
+
+.book-popover {
+  p {
+    line-height: 1.4;
+    padding: 4px;
+    position: absolute;
+  }
+
+  p:first-of-type {
+    height: 236px;
+    left: 126px;
+    top: 83px;
+    transform: perspective(108px) rotate(1deg) rotateY(5deg) rotateX(-1deg) skew(5deg, -7deg);
+    width: 201px;
+  }
+
+  p:last-of-type {
+    height: 233px;
+    left: 337px;
+    top: 68px;
+    transform: perspective(139px) rotate(1deg) rotateY(-6deg) rotateX(0deg) skew(1deg, -2deg);
+    width: 180px;
+  }
+}
+
+#olive-book span {
+  background: var(--color-olive);
+  color: #fff
+}
+
+[for=collect-remote] {
+  left: 226px;
+  top: 263px;
+
+  :has(#collect-remote:checked) & {
+    display: none;
+  }
+}
+
+[for=globe] {
+  left: 545px;
+  overflow: hidden;
+  top: 180px;
+  width: 44px;
+}
+
+#image_east_globe {
+  :has(#globe:checked) & {
+    animation: frameCycle steps(4) 0.3s infinite;
+  }
+}
+
+[for=globe-smash] {
+  left: 545px;
+  height: 57px;
+  overflow: hidden;
+  top: 181px;
+  width: 44px;
+  z-index: 1;
+  animation-play-state: paused
+}
+
+[for=globe-smash] {
+  display: none
+}
+
+[popovertarget=globe-broken] {
+  display: none;
+  left: 529px;
+  overflow: hidden;
+  position: absolute;
+  top: 185px
+}
+
+[for=door-left],
+[for=door-right] {
+  height: 89px;
+  top: 256px;
+  width: 105px;
+  z-index: 2
+}
+
+[for=door-left] {
+  left: 359px;
+
+  :has(#door-left:checked) & {
+    height: 96px;
+    left: 340px;
+    top: 252px;
+    width: 20px;
+
+    #image_east_door_left {
+      display: none
+    }
+
+    #image_east_door_left_open {
+      display: block;
+    }
+  }
+}
+
+[for=door-right] {
+  left: 471px;
+
+  :has(#door-right:checked) & {
+    height: 96px;
+    left: 576px;
+    top: 252px;
+    width: 20px;
+
+    #image_east_door_right {
+      display: none
+    }
+
+    #image_east_door_right_open {
+      display: block;
+    }
+  }
+}
+
+#image_east_door_left_open,
+#image_east_door_right_open {
+  display: none;
+}
+
+[for=collect-uv] {
+  left: 490px;
+  top: 267px;
+
+  :has(#collect-uv:checked) & {
+    display: none;
+  }
+}
+
+[id^=globe-num] {
+  font-size: 12px;
+  font-weight: 600;
+  pointer-events: none;
+  position: absolute;
+  z-index: 5
+}
+
+#globe-num-one {
+  left: 213px;
+  top: 40px
+}
+
+#globe-num-two {
+  left: 209px;
+  top: 125px
+}
+
+#globe-num-three {
+  left: 298px;
+  top: 123px
+}
+
+#globe-num-four {
+  left: 297px;
+  top: 199px
+}
+
+#globe-num-five {
+  left: 384px;
+  top: 79px
+}
+
+div[id^=gl-] {
+  height: 24px;
+  position: absolute;
+  width: 24px;
+  display: grid;
+  font-size: 20px;
+  inset: 0;
+  place-content: center;
+  pointer-events: none;
+  position: absolute;
+  text-transform: capitalize;
+  z-index: 1;
+
+  &:has(input:first-of-type:checked) label:first-of-type,
+  &:has(input:nth-of-type(2):checked) label:nth-of-type(2),
+  &:has(input:nth-of-type(3):checked) label:nth-of-type(3) {
+    pointer-events: none !important;
+    z-index: 3
+  }
+}
+
+
+
+#gl-1 {
+  left: 211px;
+  top: 44px
+}
+
+#gl-2 {
+  left: 210px;
+  top: 74px
+}
+
+#gl-3 {
+  left: 210px;
+  top: 100px
+}
+
+#gl-4 {
+  left: 208px;
+  top: 127px
+}
+
+#gl-5 {
+  left: 238px;
+  top: 127px
+}
+
+#gl-6 {
+  left: 268px;
+  top: 127px
+}
+
+#gl-7 {
+  left: 298px;
+  top: 126px
+}
+
+#gl-8 {
+  height: 21px;
+  left: 297px;
+  top: 153px
+}
+
+#gl-9 {
+  height: 23px;
+  left: 297px;
+  top: 176px
+}
+
+#gl-10 {
+  left: 297px;
+  top: 201px
+}
+
+#gl-11 {
+  left: 326px;
+  top: 201px
+}
+
+#gl-12 {
+  left: 356px;
+  top: 200px
+}
+
+#gl-13 {
+  left: 386px;
+  top: 200px
+}
+
+#gl-14 {
+  left: 413px;
+  top: 200px;
+  width: 23px
+}
+
+#gl-15 {
+  left: 438px;
+  top: 199px
+}
+
+#gl-16 {
+  height: 20px;
+  left: 385px;
+  top: 81px
+}
+
+#gl-17 {
+  height: 20px;
+  left: 386px;
+  top: 101px
+}
+
+#gl-18 {
+  left: 385px;
+  top: 123px
+}
+
+#gl-19 {
+  height: 22px;
+  left: 386px;
+  top: 151px
+}
+
+#gl-20 {
+  height: 22px;
+  left: 385px;
+  top: 175px
+}
+
+#globe-clues {
+  display: flex;
+  flex-direction: column;
+  height: 117px;
+  left: 208px;
+  line-height: 1.3;
+  position: absolute;
+  text-wrap: pretty;
+  top: 245px;
+  transform: perspective(509px) rotate(2deg) rotateY(-1deg) rotateX(6deg) skew(3deg, -3deg);
+  transform-origin: center right;
+  width: 257px;
+
+  li:nth-child(2)::before {
+    border: 3px solid var(--color-red);
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    left: -22px;
+    border-radius: 100%
+  }
+}
+
+#image_east_crossword_complete {
+  display: block
+}

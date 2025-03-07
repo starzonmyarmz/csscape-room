@@ -1,0 +1,186 @@
+<section id="east">
+  <div id="books-top">
+    <div class="stacked" style="align-items: end;">
+      {% book "orange", 9, 24 %}
+      {% book "blue", 5, 25 %}
+      {% book "green", 5, 27 %}
+    </div>
+
+    {% for book in top_shelf_books %}
+      {% book book.color, book.height, book.width %}
+    {% endfor %}
+
+    <div class="stacked">
+      {% book "yellow", 7, 19 %}
+      {% book "green", 8, 24 %}
+      {% book "red", 10, 27 %}
+    </div>
+  </div>
+
+  <div id="books-middle">
+    <div class="stacked" style="align-items: end;">
+      {% book "yellow", 8, 24 %}
+      {% book "blue", 4, 29 %}
+      {% book "green", 4, 29 %}
+    </div>
+
+    {% for book in middle_shelf_books %}
+      {% book book.color, book.height, book.width %}
+    {% endfor %}
+
+    <div class="stacked">
+      {% book "aqua", 9, 19 %}
+      {% book "yellow", 5, 23 %}
+      {% book "pink", 5, 27 %}
+    </div>
+  </div>
+
+  <div id="books-bottom">
+    <div class="stacked" style="align-items: end;">
+      {% book "green", 7, 16 %}
+      {% book "pink", 6, 20 %}
+      {% book "red", 5, 24 %}
+    </div>
+
+    {% for book in bottom_shelf_books %}
+      {% book book.color, book.height, book.width %}
+    {% endfor %}
+
+    <div class="stacked">
+      {% book "pink", 10, 18 %}
+      {% book "blue", 9, 29 %}
+    </div>
+  </div>
+
+  {% bookpopover "yellow" %}
+    <p>When I waked it was broad day, the weather clear, and the storm abated, so that the sea did not rage and swell as before. But that which surprised me most was, that the ship was lifted off</p>
+    <p>in the night from the sand where she lay by the swelling of the tide, and was driven up almost as far as the rock which I at first mentioned, where I had been so bruised by the wave</p>
+  {% endbookpopover %}
+
+  {% bookpopover "blue" %}
+    <p>Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see</p>
+    <p>the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. Whenever I find myself growing grim about the mouth;</p>
+  {% endbookpopover %}
+
+  {% bookpopover "aqua" %}
+    <p>“Sir,” said Telemachus, “as regards your question, so long as my father was here it was well with us and with the house, but the gods in their displeasure have willed it otherwise, and have hidden him</p>
+    <p>away more closely than mortal man was ever yet hidden. I could have borne it better even though he were dead, if he had fallen with his men before Troy, or had died with friends</p>
+  {% endbookpopover %}
+
+  {% bookpopover "red" %}
+    <p>When a man thinketh on any thing whatsoever, His next Thought after, is not altogether so casuall as it seems to be. Not every Thought to every Thought succeeds indifferently.</p>
+    <p>But as wee have no Imagination, whereof we have not formerly had Sense, in whole, or in parts; so we have no Transition from one Imagination to another, whereof we never had the</p>
+  {% endbookpopover %}
+
+  {% bookpopover "green" %}
+    <p>“Why, there is the morning again! How remiss I am to let you stay up so long. You must make your conversation regarding my dear new country of England less interesting, so that I</p>
+    <p>may not forget how time flies by us,” and, with a courtly bow, he quickly left me. I went into my own room and drew the curtains, but there was little to notice; my window opened into the</p>
+  {% endbookpopover %}
+
+  {% bookpopover "pink" %}
+    <p>“How doth the little crocodile Improve his shining tail, And pour the waters of the Nile On every golden scale!</p>
+    <p>“How cheerfully he seems to grin, How neatly spread his claws, And welcome little fishes in with gently smiling jaws!”</p>
+  {% endbookpopover %}
+
+  {% bookpopover "purple" %}
+    <p>See what kind of love the Father has given to us, that we should be called children of God; and so we are. The reason why the world does not know us is that it did not know him. Beloved, we are God’s children</p>
+    <p>now, and what we will be has not yet appeared; but we know that when he appears we shall be like him, because we shall see him as he is. And everyone who thus hopes in him purifies himself</p>
+  {% endbookpopover %}
+
+  {% bookpopover "orange" %}
+    <p>Confident as I am that you will not trifle with this appeal, my heart sinks and my hand trembles at the bare thought of such a possibility. Think of me at this hour, in a strange place,</p>
+    <p>labouring under a blackness of distress that no fancy can exaggerate, and yet well aware that, if you will but punctually serve me, my troubles will roll away like a</p>
+  {% endbookpopover %}
+
+  {% bookpopover "olive" %}
+    <p>A succession of loud and shrill screams, burs<span>t</span>ing suddenly from the throat of the chained form, seemed to t<span>h</span>rust me violently back. For a brief moment I hesitated—I trembled.</p>
+    <p>Unsheathing my <span>r</span>apier, I began to grope with it about the r<span>e</span>cess; but the thought of an instant reassured me. I plac<span>e</span>d my hand upon the solid fabric of the catacombs,</p>
+  {% endbookpopover %}
+
+  {% bookpopover "lime" %}
+    <p>If you are not so compassionate as to dine today with Louisa and me, we shall be in danger of hating each other for the rest of our lives; for a whole day’s tête-à-tête between two</p>
+    <p>women can never end without a quarrel. Come as soon as you can on the receipt of this. My brother and the gentlemen are to dine with the officers. Yours ever, Caroline Bingley.</p>
+  {% endbookpopover %}
+
+  {% bookpopover "silver" %}
+    <p>We rest; a dream has power to poison sleep. We rise; one wand’ring thought pollutes the day. We feel, conceive, or reason; laugh, or weep, Embrace fond woe, or cast our cares away;</p>
+    <p>It is the same: for, be it joy or sorrow, The path of its departure still is free. Man’s yesterday may ne’er be like his morrow; Nought may endure but mutability!</p>
+  {% endbookpopover %}
+
+  <input type="checkbox" id="collect-remote" tabindex="-1">
+  <label for="collect-remote">
+    {% img "east_remote" %}
+  </label>
+
+  <input type="checkbox" id="globe" tabindex="-1">
+  <label for="globe">
+    {% img "east_globe" %}
+  </label>
+
+  <input type="checkbox" id="globe-smash" tabindex="-1">
+  <label for="globe-smash">
+    {% img "east_globe" %}
+  </label>
+
+  <button popovertarget="globe-broken" tabindex="-1">
+    {% img "east_globe_smash" %}
+  </button>
+
+  <div id="globe-broken" popover>
+    <button popovertarget="globe-broken" popovertargetaction="hide" tabindex="-1">Back to room</button>
+
+    <div id="globe-num-one">1</div>
+    <div id="globe-num-two">2</div>
+    <div id="globe-num-three">3</div>
+    <div id="globe-num-four">4</div>
+    <div id="globe-num-five">5</div>
+
+    <div id="globe-puzzle">
+      {% for x, y, z in crossword %}
+        {% set i = loop.index %}
+
+        <div id="gl-{{i}}">
+          <label for="gl-{{i}}-blank"></label>
+          <label for="gl-{{i}}-{{x}}">{{x}}</label>
+          <label for="gl-{{i}}-{{y}}">{{y}}</label>
+          <label for="gl-{{i}}-{{z}}">{{z}}</label>
+
+          <input type="radio" name="gl-{{i}}" id="gl-{{i}}-blank" tabindex="-1" checked>
+          <input type="radio" name="gl-{{i}}" id="gl-{{i}}-{{x}}" tabindex="-1">
+          <input type="radio" name="gl-{{i}}" id="gl-{{i}}-{{y}}" tabindex="-1">
+          <input type="radio" name="gl-{{i}}" id="gl-{{i}}-{{z}}" tabindex="-1">
+        </div>
+      {% endfor %}
+    </div>
+
+    <ol id="globe-clues">
+      <li>Epic tale spanning generations</li>
+      <li>Curved structure</li>
+      <li>Brave protagonist</li>
+      <li>Tool for unsealing</li>
+      <li>Not level or irregular</li>
+    </ol>
+
+    {% img "east_crossword" %}
+    {% img "east_crossword_complete" %}
+  </div>
+
+  <input type="checkbox" id="door-left" tabindex="-1">
+  <label for="door-left">
+    {% img "east_door_left" %}
+    {% img "east_door_left_open" %}
+  </label>
+
+  <input type="checkbox" id="door-right" tabindex="-1">
+  <label for="door-right">
+    {% img "east_door_right" %}
+    {% img "east_door_right_open" %}
+  </label>
+
+  <input type="checkbox" id="collect-uv" tabindex="-1">
+  <label for="collect-uv">
+    {% img "east_uv" %}
+  </label>
+
+  {% img "east" %}
+</section>

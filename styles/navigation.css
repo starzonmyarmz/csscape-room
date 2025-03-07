@@ -1,0 +1,119 @@
+#navigation {
+  display: none;
+  height: 400px;
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 640px;
+  z-index: calc(infinity);
+
+  :has(#start:checked) & {
+    display: block;
+  }
+}
+
+.east,
+.west {
+  padding: 4px;
+  pointer-events: all;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 36px;
+  z-index: calc(infinity);
+  margin: 0 auto
+}
+
+.east {
+  right: 4px
+}
+
+input[name=direction] + label {
+  display: none
+}
+
+:has(#ee:checked) :is([for=sw], [for=se]),
+:has(#ew:checked) :is([for=nw], [for=ne]),
+:has(#ne:checked) :is([for=ew], [for=ee]),
+:has(#nw:checked) :is([for=ww], [for=we]),
+:has(#se:checked) :is([for=ww], [for=we]),
+:has(#sw:checked) :is([for=ew], [for=ee]),
+:has(#we:checked) :is([for=nw], [for=ne]),
+:has(#ww:checked) :is([for=sw], [for=se]) {
+  display: block
+}
+
+#east,
+#north,
+#south,
+#west {
+  visibility: hidden;
+}
+
+:has(#ee:checked) #south,
+:has(#ew:checked) #north,
+:has(#ne:checked) #east,
+:has(#nw:checked) #west,
+:has(#se:checked) #west,
+:has(#sw:checked) #east,
+:has(#we:checked) #north,
+:has(#ww:checked) #south {
+  z-index: 2
+}
+
+:has(#ee:checked) #south,
+:has(#ne:checked) #east,
+:has(#se:checked) #west,
+:has(#we:checked) #north {
+  animation: fromRight .5s 1 forwards;
+  visibility: visible
+}
+
+:has(#ee:checked) #east,
+:has(#ne:checked) #north,
+:has(#se:checked) #south,
+:has(#we:checked) #west {
+  animation: toLeft .5s 1 forwards;
+  visibility: visible
+}
+
+:has(#ew:checked) #north,
+:has(#nw:checked) #west,
+:has(#sw:checked) #east,
+:has(#ww:checked) #south {
+  animation: fromLeft .5s 1 forwards;
+  visibility: visible
+}
+
+:has(#ew:checked) #east,
+:has(#nw:checked) #north,
+:has(#sw:checked) #south,
+:has(#ww:checked) #west {
+  animation: toRight .5s 1 forwards;
+  visibility: visible
+}
+
+@keyframes fromLeft {
+  from {
+    translate: -100%
+  }
+}
+
+@keyframes fromRight {
+  from {
+    translate: 100%
+  }
+}
+
+@keyframes toLeft {
+  to {
+    translate: -100%
+  }
+}
+
+@keyframes toRight {
+  to {
+    translate: 100%
+  }
+}

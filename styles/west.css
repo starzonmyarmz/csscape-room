@@ -1,0 +1,278 @@
+[for=poster] {
+  left: 447px;
+  height: 170px;
+  overflow: hidden;
+  top: 75px;
+  width: 136px;
+  z-index: 1;
+
+  :has(#poster:checked) & {
+    display: none;
+  }
+}
+
+#image_west_poster {
+  :has(#fan-on:checked) & {
+    animation: frameCycle steps(4) .2s infinite alternate;
+  }
+}
+
+#screen {
+  height: 173px;
+  left: 77px;
+  overflow: hidden;
+  position: absolute;
+  top: 107px;
+  width: 312px;
+  z-index: 1;
+
+  :has(#tv:checked):has(#dvd:checked) & {
+    background: var(--color-blue);
+  }
+}
+
+[for=tv] {
+  display: none;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  :has(#equip-remote:checked) & {
+    display: block;
+  }
+}
+
+#image_west_static {
+  display: none;
+
+  :has(#tv:checked) & {
+    animation: frameCycle steps(3) .3s infinite;
+    display: block;
+  }
+
+  :has(#dvd:checked) & {
+    display: none;
+  }
+}
+
+#image_west_one {
+  display: none;
+
+  :has(#tv:checked):has(#dvd:checked) & {
+    animation: one 10s infinite linear;
+    display: block;
+  }
+
+}
+
+@keyframes one {
+  0% {
+    translate: 119px
+  }
+
+  25% {
+    translate: 0 48px
+  }
+
+  50% {
+    translate: 100px 149px
+  }
+
+  75% {
+    translate: 256px 87px
+  }
+
+  100% {
+    translate: 119px
+  }
+}
+
+#stereo {
+  height: 29px;
+  left: 192px;
+  overflow: hidden;
+  position: absolute;
+  top: 326px;
+  width: 80px
+}
+
+[for=dvd] {
+  display: none;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  :has(#equip-dvd:checked) & {
+    display: block;
+  }
+}
+
+#image_west_dvd_player {
+  :has(#dvd:checked) & {
+    animation: frameCycle steps(8) .6s infinite alternate;
+  }
+}
+
+[popovertarget=tv-left-drawer] {
+  height: 39px;
+  left: 96px;
+  position: absolute;
+  top: 320px;
+  width: 60px
+}
+
+[popovertarget=tv-right-drawer] {
+  height: 39px;
+  left: 308px;
+  position: absolute;
+  top: 320px;
+  width: 60px
+}
+
+[for=collect-mondrian] {
+  left: 200px;
+  top: 196px;
+
+  :has(#collect-mondrian:checked) & {
+    display: none;
+  }
+}
+
+[popovertarget=west-safe-zoomedin] {
+  display: grid;
+  left: 467px;
+  position: absolute;
+  top: 120px
+}
+
+#code-small {
+  display: none;
+  gap: 2px;
+  grid-template-columns: repeat(5, 8px);
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  z-index: 2;
+  height: 12px;
+  width: 5px
+}
+
+:has(#poster:checked) & {
+  display: grid
+}
+
+.code {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 62px;
+  outline: 1px solid var(--color-midnight);
+  width: 30px
+}
+
+.code-down,
+.code-down-dummy,
+.code-up-dummy {
+  display: none;
+  height: 16px;
+  position: relative;
+  width: 16px
+}
+
+:has(#code-2-red:checked) :is(#code-2-up-dummy, [for=code-2-orange].code-down),
+:has(#code-3-red:checked) :is(#code-3-up-dummy, [for=code-3-orange].code-down),
+:has(#code-4-red:checked) :is(#code-4-up-dummy, [for=code-4-orange].code-down),
+:has(#code-5-red:checked) :is(#code-5-up-dummy, [for=code-5-orange].code-down) {
+  display: revert
+}
+
+:has(#code-1-orange:checked) :is([for=code-1-red].code-up, [for=code-1-yellow].code-down),
+:has(#code-2-orange:checked) :is([for=code-2-red].code-up, [for=code-2-yellow].code-down),
+:has(#code-3-orange:checked) :is([for=code-3-red].code-up, [for=code-3-yellow].code-down),
+:has(#code-4-orange:checked) :is([for=code-4-red].code-up, [for=code-4-yellow].code-down),
+:has(#code-5-orange:checked) :is([for=code-5-red].code-up, [for=code-5-yellow].code-down) {
+  display: revert
+}
+
+:has(#code-1-yellow:checked) :is([for=code-1-orange].code-up, [for=code-1-lime].code-down),
+:has(#code-2-yellow:checked) :is([for=code-2-orange].code-up, [for=code-2-lime].code-down),
+:has(#code-3-yellow:checked) :is([for=code-3-orange].code-up, [for=code-3-lime].code-down),
+:has(#code-4-yellow:checked) :is([for=code-4-orange].code-up, [for=code-4-lime].code-down),
+:has(#code-5-yellow:checked) :is([for=code-5-orange].code-up, [for=code-5-lime].code-down) {
+  display: revert
+}
+
+:has(#code-1-lime:checked) :is([for=code-1-yellow].code-up, [for=code-1-green].code-down),
+:has(#code-2-lime:checked) :is([for=code-2-yellow].code-up, [for=code-2-green].code-down),
+:has(#code-3-lime:checked) :is([for=code-3-yellow].code-up, [for=code-3-green].code-down),
+:has(#code-4-lime:checked) :is([for=code-4-yellow].code-up, [for=code-4-green].code-down),
+:has(#code-5-lime:checked) :is([for=code-5-yellow].code-up, [for=code-5-green].code-down) {
+  display: revert
+}
+
+:has(#code-1-green:checked) :is([for=code-1-lime].code-up, [for=code-1-olive].code-down),
+:has(#code-2-green:checked) :is([for=code-2-lime].code-up, [for=code-2-olive].code-down),
+:has(#code-3-green:checked) :is([for=code-3-lime].code-up, [for=code-3-olive].code-down),
+:has(#code-4-green:checked) :is([for=code-4-lime].code-up, [for=code-4-olive].code-down),
+:has(#code-5-green:checked) :is([for=code-5-lime].code-up, [for=code-5-olive].code-down) {
+  display: revert
+}
+
+:has(#code-1-olive:checked) :is([for=code-1-green].code-up, [for=code-1-aqua].code-down),
+:has(#code-2-olive:checked) :is([for=code-2-green].code-up, [for=code-2-aqua].code-down),
+:has(#code-3-olive:checked) :is([for=code-3-green].code-up, [for=code-3-aqua].code-down),
+:has(#code-4-olive:checked) :is([for=code-4-green].code-up, [for=code-4-aqua].code-down),
+:has(#code-5-olive:checked) :is([for=code-5-green].code-up, [for=code-5-aqua].code-down) {
+  display: revert
+}
+
+:has(#code-1-aqua:checked) :is([for=code-1-olive].code-up, [for=code-1-blue].code-down),
+:has(#code-2-aqua:checked) :is([for=code-2-olive].code-up, [for=code-2-blue].code-down),
+:has(#code-3-aqua:checked) :is([for=code-3-olive].code-up, [for=code-3-blue].code-down),
+:has(#code-4-aqua:checked) :is([for=code-4-olive].code-up, [for=code-4-blue].code-down),
+:has(#code-5-aqua:checked) :is([for=code-5-olive].code-up, [for=code-5-blue].code-down) {
+  display: revert
+}
+
+:has(#code-1-blue:checked) :is([for=code-1-aqua].code-up, [for=code-1-purple].code-down),
+:has(#code-2-blue:checked) :is([for=code-2-aqua].code-up, [for=code-2-purple].code-down),
+:has(#code-3-blue:checked) :is([for=code-3-aqua].code-up, [for=code-3-purple].code-down),
+:has(#code-4-blue:checked) :is([for=code-4-aqua].code-up, [for=code-4-purple].code-down),
+:has(#code-5-blue:checked) :is([for=code-5-aqua].code-up, [for=code-5-purple].code-down) {
+  display: revert
+}
+
+:has(#code-1-purple:checked) :is([for=code-1-blue].code-up, [for=code-1-pink].code-down),
+:has(#code-2-purple:checked) :is([for=code-2-blue].code-up, [for=code-2-pink].code-down),
+:has(#code-3-purple:checked) :is([for=code-3-blue].code-up, [for=code-3-pink].code-down),
+:has(#code-4-purple:checked) :is([for=code-4-blue].code-up, [for=code-4-pink].code-down),
+:has(#code-5-purple:checked) :is([for=code-5-blue].code-up, [for=code-5-pink].code-down) {
+  display: revert
+}
+
+:has(#code-1-pink:checked) :is([for=code-1-purple].code-up, #code-1-down-dummy),
+:has(#code-2-pink:checked) :is([for=code-2-purple].code-up, #code-2-down-dummy),
+:has(#code-3-pink:checked) :is([for=code-3-purple].code-up, #code-3-down-dummy),
+:has(#code-4-pink:checked) :is([for=code-4-purple].code-up, #code-4-down-dummy),
+:has(#code-5-pink:checked) :is([for=code-5-purple].code-up, #code-5-down-dummy) {
+  display: revert
+}
+
+#image_west_safe_open,
+#image_west_safe_open_zoom {
+  display: none
+}
+
+#image_west_safe_open,
+#image_west_safe_open_zoom,
+[for=collect-key] {
+  display: block
+}
+
+[popovertarget=west-safe-zoomedin] {
+  left: 451px;
+  top: 117px
+}

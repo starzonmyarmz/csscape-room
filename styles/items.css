@@ -1,0 +1,42 @@
+#items {
+  align-items: center;
+  border: 0;
+  display: none;
+  gap: 4px;
+  padding-top: 8px;
+  position: relative;
+  height: 48px;
+  place-items: center;
+
+  label {
+    display: none;
+    position: revert;
+  }
+
+  :has(#start:checked) & {
+    display: flex;
+  }
+}
+
+:has(#equip-dvd:checked) [for=equip-dvd],
+:has(#equip-hammer:checked) [for=equip-hammer],
+:has(#equip-key:checked) [for=equip-key],
+:has(#equip-pencil:checked) [for=equip-pencil],
+:has(#equip-mondrian:checked) [for=equip-mondrian],
+:has(#equip-remote:checked) [for=equip-remote],
+:has(#equip-screwdriver:checked) [for=equip-screwdriver],
+:has(#equip-uv:checked) [for=equip-uv] {
+  background: var(--color-chocolate)
+}
+
+:has(#collect-dvd:checked) [for=equip-dvd],
+:has(#collect-hammer:checked) [for=equip-hammer],
+:has(#collect-key:checked) [for=equip-key],
+:has(#collect-pencil:checked) [for=equip-pencil],
+:has(#collect-mondrian:checked) [for=equip-mondrian],
+:has(#collect-remote:checked) [for=equip-remote],
+:has(#collect-screwdriver:checked) [for=equip-screwdriver],
+:has(#collect-uv:checked) [for=equip-uv],
+[for=equip-nothing] {
+  display: grid !important
+}

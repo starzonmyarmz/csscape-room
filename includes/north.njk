@@ -1,0 +1,50 @@
+<section id="north">
+  <input type="checkbox" id="light-off" tabindex="-1">
+  <label for="light-off">
+    {% img "north_switch_on" %}
+    {% img "north_switch_off" %}
+  </label>
+
+  <div id="vent-north">
+    {% img "vent" %}
+
+    <input type="checkbox" id="vent-north-unscrewed" tabindex="-1">
+    <label for="vent-north-unscrewed"></label>
+
+    <button id="vent-north-zoom" popovertarget="vent-north-zoomedin" tabindex="-1">
+      {% img "vent_open" %}
+    </button>
+  </div>
+
+  <div id="vent-north-zoomedin" popover>
+    <input type="checkbox" id="collect-hammer" tabindex="-1">
+    <label for="collect-hammer">
+      {% img "north_hammer", "Collect hammer" %}
+    </label>
+
+    {% img "vent_zoom_hammer" %}
+    {% img "vent_zoom" %}
+
+    <button popovertarget="vent-north-zoomedin" popovertargetaction="hide">
+      Back to room
+    </button>
+  </div>
+
+  {% img "north_fan_cage" %}
+
+  <div id="fan-blades">
+    {% img "north_fan_blades" %}
+  </div>
+
+  <input type="checkbox" id="fan-on" tabindex="-1">
+  <label for="fan-on">
+    {% img "north_fan_plug_off" %}
+    {% img "north_fan_plug_on" %}
+  </label>
+
+  <input type="checkbox" id="unlock" tabindex="-1">
+  <label for="unlock"></label>
+
+  {% img "north_plant" %}
+  {% img "north" %}
+</section>

@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("../font/PixelifySans-VariableFont_wght.ttf")
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  image-rendering: pixelated
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none
+}
+
+body {
+  background: var(--color-midnight);
+  color: #fff;
+  display: grid;
+  font-family: "Pixelify Sans", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-font-smoothing: none;
+  font-weight: 400;
+  min-height: 100vh;
+  overscroll-behavior: none;
+  place-items: center;
+  text-rendering: geometricPrecision
+}
+
+section {
+  height: 400px;
+  inset: 0;
+  position: absolute;
+  width: 640px;
+  z-index: 1
+}
+
+img {
+  display: block
+}
+
+button,
+input {
+  background: 0 0;
+  border: 0;
+  font-family: inherit;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+label {
+  position: absolute;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+}
+
+[popover] {
+  border: 0;
+  margin: auto;
+  overflow: visible;
+  top: -56px;
+
+  &::backdrop {
+    background: var(--color-midnight);
+  }
+}
+
+[popovertargetaction=hide] {
+  bottom: -16px !important;
+  color: #fff !important;
+  font-size: 24px !important;
+  height: revert !important;
+  left: 50% !important;
+  position: absolute !important;
+  top: revert !important;
+  translate: -50% 100% !important;
+  width: revert !important
+}
+
+@keyframes frameCycle {
+  to {
+    translate: -100%
+  }
+}
+
+#five {
+  background: var(--color-yellow);
+  color: var(--color-midnight)
+}
+
+#five-a11y {
+  display: none
+}

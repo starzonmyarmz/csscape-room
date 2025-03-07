@@ -1,0 +1,135 @@
+<section id="south">
+  <div id="vent-south">
+    {% img "vent" %}
+
+    <input type="checkbox" id="vent-south-unscrewed" tabindex="-1">
+    <label for="vent-south-unscrewed"></label>
+
+    <button id="vent-south-zoom" popovertarget="vent-south-zoomedin" tabindex="-1">
+      {% img "vent_open" %}
+    </button>
+  </div>
+
+  <div id="vent-south-zoomedin" popover>
+    <button popovertarget="vent-south-zoomedin" popovertargetaction="hide" tabindex="-1">Back to room</button>
+    {% img "vent_zoom" %}
+  </div>
+
+  <div id="south-mondrian">
+    {% img "south_mondrian" %}
+    {% img "south_mondrian_full" %}
+
+    <input type="checkbox" id="mondrian" tabindex="-1">
+    <label for="mondrian"></label>
+  </div>
+
+  <input type="checkbox" id="collect-dvd" tabindex="-1">
+  <label for="collect-dvd">
+    {% img "south_dvd" %}
+  </label>
+
+  <button popovertarget="trash-zoomedin" tabindex="-1">
+    {% img "south_trash_can" %}
+  </button>
+
+  <div id="trash-zoomedin" popover>
+    <button popovertarget="trash-zoomedin" popovertargetaction="hide" tabindex="-1">Back to room</button>
+
+    <input type="checkbox" id="trash-can-trash-1" tabindex="-1">
+    <label for="trash-can-trash-1">{% img "south_trash_1" %}</label>
+
+    <input type="checkbox" id="trash-can-trash-2" tabindex="-1">
+    <label for="trash-can-trash-2">{% img "south_trash_2" %}</label>
+
+    <input type="checkbox" id="trash-can-trash-3" tabindex="-1">
+    <label for="trash-can-trash-3">{% img "south_trash_3" %}</label>
+
+    <input type="checkbox" id="trash-can-trash-4" tabindex="-1">
+    <label for="trash-can-trash-4">{% img "south_trash_4" %}</label>
+
+    <input type="checkbox" id="trash-can-trash-5" tabindex="-1">
+    <label for="trash-can-trash-5">{% img "south_trash_5" %}</label>
+
+    <input type="checkbox" id="trash-can-trash-6" tabindex="-1">
+    <label for="trash-can-trash-6">{% img "south_trash_6" %}</label>
+
+    <input type="checkbox" id="trash-can-trash-7" tabindex="-1">
+    <label for="trash-can-trash-7">{% img "south_trash_7" %}</label>
+
+    {% img "south_trash_can_zoom" %}
+  </div>
+
+  <button popovertarget="paper" aria-label="paper">
+    {% img "south_paper" %}
+  </button>
+
+  <input type="checkbox" id="collect-pencil" tabindex="-1">
+  <label for="collect-pencil">
+    {% img "south_pencil" %}
+  </label>
+
+  <button popovertarget="desk-top-left-drawer" tabindex="-1"><span class="visually-hidden">top left desk drawer</span></button>
+  <button popovertarget="desk-top-right-drawer" tabindex="-1"><span class="visually-hidden">top right desk drawer</span></button>
+  <button popovertarget="desk-middle-left-drawer" tabindex="-1"><span class="visually-hidden">middle left desk drawer</span></button>
+  <button popovertarget="desk-middle-right-drawer" tabindex="-1"><span class="visually-hidden">middle right desk drawer</span></button>
+  <button popovertarget="desk-bottom-left-drawer" tabindex="-1"><span class="visually-hidden">bottom left desk drawer</span></button>
+  <button popovertarget="desk-bottom-right-drawer" tabindex="-1"><span class="visually-hidden">bottom right desk drawer</span></button>
+
+  <div id="clock">
+    {% img "south_clock" %}
+  </div>
+
+  <div id="paper" popover>
+    <ul id="paper-content">
+      <li>A book of olive hue upon the shelf.
+      Highlighted words that speak unto myself.</li>
+
+      <li>The DVD spins music rare and sweet.
+      While visions on the screen my eyes do meet.</li>
+
+      <li>A globe in fragments scattered on the floor.
+      A hidden secret can be found in its broken core.</li>
+
+      <li>Bold Mondrian in red and yellow gleams.
+      No blue in sight as under light it beams.</li>
+
+      <li>In basket deep lie dreams now cast aside.
+      While hidden codes in technology reside.</li>
+    </ul>
+
+    <button popovertarget="paper" popovertargetaction="hide" tabindex="-1">Back to room</button>
+
+    {% img "south_paper_zoom" %}
+  </div>
+
+  <div id="desk-top-left-drawer" popover>
+    <button popovertarget="desk-top-left-drawer" popovertargetaction="hide" tabindex="-1">Close drawer</button>
+    {% img "open_drawer_top_left" %}
+  </div>
+  <div id="desk-top-right-drawer" popover>
+    <input type="checkbox" id="collect-screwdriver" tabindex="-1">
+    <label for="collect-screwdriver">
+      {% img "west_screwdriver" %}
+    </label>
+    <button popovertarget="desk-top-right-drawer" popovertargetaction="hide" tabindex="-1">Close drawer</button>
+    {% img "open_drawer_top_right" %}
+  </div>
+  <div id="desk-middle-left-drawer" popover>
+    <button popovertarget="desk-middle-left-drawer" popovertargetaction="hide" tabindex="-1">Close drawer</button>
+    {% img "open_drawer_bottom_left" %}
+  </div>
+  <div id="desk-middle-right-drawer" popover>
+    <button popovertarget="desk-middle-right-drawer" popovertargetaction="hide" tabindex="-1">Close drawer</button>
+    {% img "open_drawer_bottom_right" %}
+  </div>
+  <div id="desk-bottom-left-drawer" popover>
+    <button popovertarget="desk-bottom-left-drawer" popovertargetaction="hide" tabindex="-1">Close drawer</button>
+    {% img "open_drawer_bottom_left" %}
+  </div>
+  <div id="desk-bottom-right-drawer" popover>
+    <button popovertarget="desk-bottom-right-drawer" popovertargetaction="hide" tabindex="-1">Close drawer</button>
+    {% img "open_drawer_bottom_right" %}
+  </div>
+
+  {% img "south" %}
+</section>

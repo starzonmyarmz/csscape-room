@@ -1,0 +1,77 @@
+[
+  {
+    "color": "blue",
+    "width": 8,
+    "height": 23
+  },
+  {
+    "color": "red",
+    "width": 5,
+    "height": 19
+  },
+  {
+    "color": "green",
+    "width": 6,
+    "height": 27
+  },
+  {
+    "color": "aqua",
+    "width": 5,
+    "height": 25
+  },
+  {
+    "color": "purple",
+    "width": 11,
+    "height": 21
+  },
+  {
+    "color": "red",
+    "width": 5,
+    "height": 17
+  },
+  {
+    "color": "yellow",
+    "width": 8,
+    "height": 29
+  },
+  {
+    "color": "blue",
+    "width": 5,
+    "height": 21
+  },
+  {
+    "color": "aqua",
+    "width": 5,
+    "height": 27
+  },
+  {
+    "color": "green",
+    "width": 6,
+    "height": 23
+  },
+  {
+    "color": "red",
+    "width": 8,
+    "height": 25
+  },
+  {
+    "color": "purple",
+    "width": 8,
+    "height": 18
+  },
+  {
+    "color": "olive",
+    "width": 11,
+    "height": 21
+  },
+  {
+    "color": "blue",
+    "width": 5,
+    "height": 29
+  },
+  {
+    "color": "yellow",
+    "width": 8,
+    "height": 23
+  }
+]

@@ -1,0 +1,80 @@
+[for="light-off"] {
+  left: 193px;
+  top: 192px
+}
+
+#image_north_switch_off {
+  :has(#light-off:checked) & {
+    display: none;
+  }
+}
+
+#image_north_switch_on {
+  display: none;
+
+  :has(#light-off:checked) & {
+    display: block;
+  }
+}
+
+#image_north_fan_cage {
+  left: 80px;
+  position: absolute;
+  top: 197px;
+  z-index: 2;
+}
+
+#fan-blades {
+  height: 31px;
+  left: 84px;
+  overflow: hidden;
+  position: absolute;
+  top: 201px;
+  width: 31px;
+  z-index: 1
+}
+
+#image_north_fan_blades {
+  :has(#fan-on:checked) & {
+    animation: frameCycle steps(4) 0.1s infinite;
+  }
+}
+
+[for="fan-on"] {
+  left: 119px;
+  top: 280px;
+
+  :has(#fan-on:checked) & {
+    left: 91px;
+    top: 280px;
+  }
+}
+
+#image_north_fan_plug_off {
+  :has(#fan-on:checked) & {
+    display: none;
+  }
+}
+
+#image_north_fan_plug_on {
+  display: none;
+
+  :has(#fan-on:checked) & {
+    display: block;
+  }
+}
+
+[for="unlock"] {
+  display: none;
+  height: 44px;
+  left: 242px;
+  top: 182px;
+  width: 36px
+}
+
+#image_north_plant {
+  left: 460px;
+  pointer-events: none;
+  position: absolute;
+  top: 111px;
+}
