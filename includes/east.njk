@@ -138,15 +138,17 @@
         {% set i = loop.index %}
 
         <div id="gl-{{i}}">
-          <label for="gl-{{i}}-blank"></label>
-          <label for="gl-{{i}}-{{x}}">{{x}}</label>
-          <label for="gl-{{i}}-{{y}}">{{y}}</label>
-          <label for="gl-{{i}}-{{z}}">{{z}}</label>
-
           <input type="radio" name="gl-{{i}}" id="gl-{{i}}-blank" tabindex="-1" checked>
+          <label for="gl-{{i}}-blank"></label>
+
           <input type="radio" name="gl-{{i}}" id="gl-{{i}}-{{x}}" tabindex="-1">
+          <label for="gl-{{i}}-{{x}}">{{x}}</label>
+
           <input type="radio" name="gl-{{i}}" id="gl-{{i}}-{{y}}" tabindex="-1">
+          <label for="gl-{{i}}-{{y}}">{{y}}</label>
+
           <input type="radio" name="gl-{{i}}" id="gl-{{i}}-{{z}}" tabindex="-1">
+          <label for="gl-{{i}}-{{z}}">{{z}}</label>
         </div>
       {% endfor %}
     </div>
