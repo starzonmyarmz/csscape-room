@@ -7,11 +7,14 @@
   <button id="west-safe-zoom" popovertarget="west-safe-zoomedin" tabindex="-1">
     <div id="code-small">
       {% for i in range(1, 6) %}
-        <div id="code-small-{{i}}">
-          <div class="code-output"></div>
+        <div id="code{{i}}-sm" class="code">
+          {% for color in colors %}
+            <div id="code{{i}}-{{color}}-sm" class="output" style="background: var(--color-{{color}})"></div>
+          {% endfor %}
         </div>
       {% endfor %}
     </div>
+
     {% img "west_safe" %}
     {% img "west_safe_open" %}
   </button>
@@ -19,28 +22,11 @@
   <div id="west-safe-zoomedin" popover>
     <div id="code-large">
       {% for i in range(1, 6) %}
-        <div id="code-{{i}}" class="code">
-          <div id="code-{{i}}-up-dummy" class="code-up-dummy" aria-hidden="true"></div>
-
+        <div class="code">
           {% for color in colors %}
-            <label for="code-{{i}}-{{color}}" class="code-up">
-              {% img "west_safe_button_up" %}
-            </label>
+            <input type="radio" name="code{{i}}" id="code{{i}}-{{color}}-lg" tabindex="-1" {{"checked" if loop.first}}>
+            <label for="code{{i}}-{{color}}-lg" style="background: var(--color-{{color}})"></label>
           {% endfor %}
-
-          <div class="code-output"></div>
-
-          {% for color in colors %}
-            <label for="code-{{i}}-{{color}}" class="code-down">
-              {% img "west_safe_button_down" %}
-            </label>
-          {% endfor %}
-
-          {% for color in colors %}
-            <input type="radio" name="code-{{i}}" id="code-{{i}}-{{color}}" tabindex="-1" {{"checked" if loop.first}}>
-          {% endfor %}
-
-          <div id="code-{{i}}-down-dummy" class="code-down-dummy" aria-hidden="true"></div>
         </div>
       {% endfor%}
     </div>
