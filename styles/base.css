@@ -84,6 +84,7 @@ input[type=radio] {
 [popovertargetaction=hide] {
   bottom: -16px !important;
   color: #fff !important;
+  display: block !important;
   font-size: 24px !important;
   height: revert !important;
   left: 50% !important;

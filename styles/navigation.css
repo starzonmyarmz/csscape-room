@@ -15,6 +15,7 @@
 
 .east,
 .west {
+  filter: drop-shadow(0 1px 0 var(--color-midnight));
   padding: 4px;
   place-content: center;
   pointer-events: all;
@@ -22,7 +23,14 @@
   translate: 0 -50%;
   width: 36px;
   z-index: calc(infinity);
-  margin: 0 auto
+
+  &:hover {
+    filter: invert(1) drop-shadow(0 1px 0 #fff);
+  }
+
+  &:active {
+    translate: 0 calc(-50% + 1px);
+  }
 }
 
 .east {

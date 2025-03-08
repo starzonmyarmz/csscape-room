@@ -224,7 +224,7 @@ div[id^=gl-] {
   }
 
   input:checked + label + input + label,
-  :has(input:last-of-type:checked) label:first-of-type {
+  &:has(input:last-of-type:checked) label:first-of-type {
     z-index: 2;
   }
 }
@@ -366,4 +366,18 @@ div[id^=gl-] {
 
 #image_east_crossword_complete {
   display: none;
+}
+
+:has(#gl-1-s:checked):has(#gl-2-a:checked):has(#gl-3-g:checked):has(#gl-4-a:checked):has(#gl-5-r:checked):has(#gl-6-c:checked):has(#gl-7-h:checked):has(#gl-8-e:checked):has(#gl-9-r:checked):has(#gl-10-o:checked):has(#gl-11-p:checked):has(#gl-12-e:checked):has(#gl-13-n:checked):has(#gl-14-e:checked):has(#gl-15-r:checked):has(#gl-16-u:checked):has(#gl-17-n:checked):has(#gl-18-e:checked):has(#gl-19-v:checked):has(#gl-20-e:checked) {
+  #image_east_crossword {
+    display: none;
+  }
+
+  #image_east_crossword_complete {
+    display: block;
+  }
+
+  :is(#gl-3, #gl-5, #gl-8, #gl-12, #gl-17) label {
+    background: var(--color-green);
+  }
 }
