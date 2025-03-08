@@ -2,31 +2,63 @@
   left: 174px;
   position: absolute;
   top: 152px;
-  transition: translate 1s .2s
+  transition: translate 1s .2s;
+
+  :has(#mondrian:checked) & {
+    display: block;
+    translate: 0 100%;
+  }
 }
 
 [for=mondrian] {
   display: none;
-  z-index: 2
+  inset: 0;
+  z-index: 2;
+
+  :has(#equip-mondrian:checked) & {
+    display: block;
+  }
+}
+
+#image_south_mondrian {
+  :has(#mondrian:checked) & {
+    display: none;
+  }
 }
 
 #image_south_mondrian_full {
-  display: none
+  display: none;
+
+  :has(#mondrian:checked) & {
+    display: block;
+  }
 }
 
 #sourth-wall-clue {
   color: var(--color-silver);
-  display: grid;
+  display: none;
   height: 84px;
   left: 157px;
   opacity: 0;
+  place-content: center;
   pointer-events: none;
   position: absolute;
   rotate: -9deg;
   top: 125px;
   width: 84px;
   z-index: calc(infinity);
-  place-content: center
+}
+
+:has(#equip-uv:checked):has(#light-off:checked):has(#ee:checked),
+:has(#equip-uv:checked):has(#light-off:checked):has(#ww:checked) {
+  #sourth-wall-clue {
+    display: grid;
+    pointer-events: all;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 [for=collect-dvd] {

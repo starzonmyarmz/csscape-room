@@ -19,7 +19,7 @@
   mix-blend-mode: multiply;
   pointer-events: none;
   position: absolute;
-  z-index: calc(infinity);
+  z-index: 9999;
 
   :has(#light-off:checked) & {
     display: block;
