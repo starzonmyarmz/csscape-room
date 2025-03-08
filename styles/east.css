@@ -27,7 +27,7 @@
 .book-popover {
   p {
     line-height: 1.4;
-    padding: 4px;
+    padding: 8px;
     position: absolute;
   }
 
@@ -41,10 +41,10 @@
 
   p:last-of-type {
     height: 233px;
-    left: 337px;
+    left: 341px;
     top: 68px;
     transform: perspective(139px) rotate(1deg) rotateY(-6deg) rotateX(0deg) skew(1deg, -2deg);
-    width: 180px;
+    width: 176px;
   }
 }
 

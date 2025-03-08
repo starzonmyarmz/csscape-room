@@ -272,7 +272,7 @@
   }
 }
 
-:has(#code1-blue-lg:checked):has(#code2-green-lg:checked):has(#code3-olive-lg:checked):has(#code4-red-lg:checked):has(#code5-yellow-lg:checked) {
+:has(#code1-blue-lg:checked):has(#code2-green-lg:checked):has(#code3-olive-lg:checked):has(#code4-aqua-lg:checked):has(#code5-yellow-lg:checked) {
 
   #image_west_safe,
   #image_west_safe_zoom,

@@ -1,1 +1,4 @@
-
+#over {
+  background: var(--color-midnight);
+  display: none;
+}
