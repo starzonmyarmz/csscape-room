@@ -69,7 +69,11 @@
   height: 44px;
   left: 242px;
   top: 182px;
-  width: 36px
+  width: 36px;
+
+  :has(#equip-key:checked) & {
+    display: block;
+  }
 }
 
 #image_north_plant {
