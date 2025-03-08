@@ -67,6 +67,10 @@
   overflow: hidden;
   top: 180px;
   width: 44px;
+
+  :has(#globe-smash:checked) & {
+    display: none;
+  }
 }
 
 #image_east_globe {
@@ -76,17 +80,20 @@
 }
 
 [for=globe-smash] {
+  display: none;
   left: 545px;
   height: 57px;
-  overflow: hidden;
   top: 181px;
   width: 44px;
   z-index: 1;
-  animation-play-state: paused
-}
 
-[for=globe-smash] {
-  display: none
+  :has(#equip-hammer:checked) & {
+    display: block;
+  }
+
+  :has(#globe-smash:checked) & {
+    display: none;
+  }
 }
 
 [popovertarget=globe-broken] {
@@ -94,7 +101,11 @@
   left: 529px;
   overflow: hidden;
   position: absolute;
-  top: 185px
+  top: 185px;
+
+  :has(#globe-smash:checked) & {
+    display: block;
+  }
 }
 
 [for=door-left],
