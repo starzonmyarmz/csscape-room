@@ -35,10 +35,8 @@ body {
 }
 
 section {
-  height: 400px;
   inset: 0;
   position: absolute;
-  width: 640px;
   z-index: 1
 }
 

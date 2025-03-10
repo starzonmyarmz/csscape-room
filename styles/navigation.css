@@ -11,6 +11,10 @@
   :has(#start:checked) & {
     display: block;
   }
+
+  :has(#unlock:checked) & {
+    display: none;
+  }
 }
 
 .east,

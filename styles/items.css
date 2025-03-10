@@ -1,6 +1,7 @@
 #items {
   border: 0;
-  display: none;
+  display: flex;
+  opacity: 0;
   gap: 4px;
   margin-top: 4px;
 
@@ -13,7 +14,11 @@
   }
 
   :has(#start:checked) & {
-    display: flex;
+    opacity: 1;
+  }
+
+  :has(#unlock:checked) & {
+    opacity: 0;
   }
 }
 
