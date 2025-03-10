@@ -1,11 +1,10 @@
 #navigation {
   display: none;
-  height: 400px;
+  inset: 0;
   pointer-events: none;
   position: absolute;
   left: 0;
   top: 0;
-  width: 640px;
   z-index: calc(infinity);
 
   :has(#start:checked) & {

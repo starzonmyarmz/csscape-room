@@ -74,6 +74,14 @@ input[type=radio] {
   overflow: visible;
   top: -56px;
 
+  @media (width > 960px) and (height > 678px) {
+    transform: scale(1.5);
+  }
+
+  @media (width > 1280px) and (height > 904px) {
+    transform: scale(2);
+  }
+
   &::backdrop {
     background: var(--color-midnight);
   }
