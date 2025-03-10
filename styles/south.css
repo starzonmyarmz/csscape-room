@@ -175,7 +175,11 @@
 [popovertarget=trash-zoomedin] {
   position: absolute;
   left: 511px;
-  top: 295px
+  top: 295px;
+}
+
+[for^=trash-can-trash-] {
+  z-index: 2;
 }
 
 [for=trash-can-trash-1] {
@@ -215,4 +219,12 @@
 
 [id^=trash-can-trash-]:checked + label {
   display: none;
+}
+
+#image_south_qr {
+  left: 50%;
+  position: absolute;
+  top: 200px;
+  translate: -50%;
+  z-index: 1;
 }
