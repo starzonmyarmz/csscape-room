@@ -25,6 +25,9 @@ jobs:
           npm ci
           npm run build
       - uses: actions/upload-pages-artifact@v3
+        with:
+          name: build
+          path: ./_site
 
   deploy:
     runs-on: ubuntu-latest
