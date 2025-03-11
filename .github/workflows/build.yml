@@ -24,6 +24,7 @@ jobs:
         run: |
           npm ci
           npm run build
+          npm run styles
       - uses: actions/upload-pages-artifact@v3
 
   deploy:
