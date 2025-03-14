@@ -34,6 +34,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("font")
   eleventyConfig.addPassthroughCopy("images")
   eleventyConfig.addPassthroughCopy("styles")
+  eleventyConfig.addPassthroughCopy("favicon.ico")
 
   eleventyConfig.addTransform("htmlmin", function (content) {
     if ((this.page.outputPath || "").endsWith(".html")) {
