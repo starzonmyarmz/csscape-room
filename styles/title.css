@@ -2,7 +2,7 @@
   background: var(--color-midnight);
   color: #fff;
   display: grid;
-  font-size: 24px;
+  font-size: 16px;
   place-items: center;
   text-align: center;
   z-index: calc(infinity);
@@ -18,7 +18,8 @@
     cursor: pointer;
     display: inline-block;
     line-height: 1;
-    padding: 1rem;
+    margin-block: 32px;
+    padding: 16px;
     position: relative;
     text-shadow: 0 1px 0 var(--color-midnight);
 
