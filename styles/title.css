@@ -9,13 +9,18 @@
 
   a {
     color: inherit;
+    cursor: inherit;
+    position: relative;
     text-decoration: none;
+
+    &:hover {
+      top: 1px;
+    }
   }
 
   [for="start"] {
     background: var(--color-green);
     color: #fff;
-    cursor: pointer;
     display: inline-block;
     line-height: 1;
     margin-block: 32px;
