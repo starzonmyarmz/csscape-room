@@ -31,7 +31,47 @@ body {
   min-height: 100vh;
   overscroll-behavior: none;
   place-items: center;
-  text-rendering: geometricPrecision
+  text-rendering: geometricPrecision;
+
+  :has(#equip-nothing:checked) & {
+    cursor: url(../images/item_hand.png), auto;
+  }
+
+  :has(#equip-dvd:checked) & {
+    cursor: url(../images/item_dvd.png), auto;
+  }
+
+  :has(#equip-hammer:checked) & {
+    cursor: url(../images/item_hammer.png), auto;
+  }
+
+  :has(#equip-key:checked) & {
+    cursor: url(../images/item_key.png), auto;
+  }
+
+  :has(#equip-pencil:checked) & {
+    cursor: url(../images/item_pencil.png), auto;
+  }
+
+  :has(#equip-mondrian:checked) & {
+    cursor: url(../images/item_mondrian.png), auto;
+  }
+
+  :has(#equip-remote:checked) & {
+    cursor: url(../images/item_remote.png), auto;
+  }
+
+  :has(#equip-screwdriver:checked) & {
+    cursor: url(../images/item_screwdriver.png), auto;
+  }
+
+  :has(#equip-uv:checked) & {
+    cursor: url(../images/item_uv.png), auto;
+  }
+
+  :has(#equip-uv:checked):has(#light-off:checked) & {
+    cursor: url(../images/item_uv_on.png), auto;
+  }
 }
 
 section {
@@ -48,6 +88,7 @@ button,
 input {
   background: 0 0;
   border: 0;
+  cursor: inherit;
   font-family: inherit;
   padding: 0;
 
@@ -57,6 +98,7 @@ input {
 }
 
 label {
+  cursor: inherit;
   position: absolute;
 }
 
@@ -66,6 +108,7 @@ input[type=radio] {
   opacity: 0;
   position: absolute;
   top: 0;
+  z-index: -1;
 }
 
 [popover] {
