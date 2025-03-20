@@ -233,6 +233,7 @@
   animation: cat 20s infinite;
   display: none;
   left: 60px;
+  pointer-events: none;
   position: absolute;
   top: 304px;
 
