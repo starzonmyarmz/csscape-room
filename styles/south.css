@@ -228,3 +228,28 @@
   translate: -50%;
   z-index: 1;
 }
+
+#image_cat {
+  animation: cat 20s infinite;
+  display: none;
+  left: 60px;
+  position: absolute;
+  top: 304px;
+
+  :has(#vent-south-unscrewed:checked) & {
+    display: block;
+  }
+}
+
+@keyframes cat {
+
+  0%,
+  89.999% {
+    opacity: 0;
+  }
+
+
+  90% {
+    opacity: 1;
+  }
+}
