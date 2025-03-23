@@ -49,8 +49,8 @@
   z-index: calc(infinity);
 }
 
-:has(#equip-uv:checked):has(#light-off:checked):has(#ee:checked),
-:has(#equip-uv:checked):has(#light-off:checked):has(#ww:checked) {
+:has(#mondrian:checked):has(#equip-uv:checked):has(#light-off:checked):has(#ee:checked),
+:has(#mondrian:checked):has(#equip-uv:checked):has(#light-off:checked):has(#ww:checked) {
   #sourth-wall-clue {
     display: grid;
     pointer-events: all;
