@@ -240,6 +240,7 @@ div[id^=gl-] {
 
 #gl-2 {
   left: 210px;
+  height: 23px;
   top: 74px
 }
 
@@ -318,14 +319,15 @@ div[id^=gl-] {
 }
 
 #gl-17 {
-  height: 20px;
+  height: 18px;
   left: 386px;
-  top: 101px
+  top: 103px
 }
 
 #gl-18 {
+  height: 23px;
   left: 385px;
-  top: 123px
+  top: 125px;
 }
 
 #gl-19 {
@@ -338,11 +340,6 @@ div[id^=gl-] {
   height: 22px;
   left: 385px;
   top: 175px
-}
-
-:is(#gl-3, #gl-5, #gl-8, #gl-12, #gl-17) label {
-  background: var(--color-midnight);
-  color: #fff;
 }
 
 #globe-clues {
@@ -388,5 +385,6 @@ div[id^=gl-] {
 
   :is(#gl-3, #gl-5, #gl-8, #gl-12, #gl-17) label {
     background: var(--color-green);
+    color: #fff;
   }
 }
