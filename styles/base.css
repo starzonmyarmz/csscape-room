@@ -104,7 +104,7 @@ label {
 
 input[type=checkbox],
 input[type=radio] {
-  left: 0;
+  left: -1000px;
   opacity: 0;
   position: absolute;
   top: 0;
@@ -145,7 +145,7 @@ input[type=radio] {
 
 @keyframes frameCycle {
   to {
-    translate: -100%
+    translate: -100%;
   }
 }
 

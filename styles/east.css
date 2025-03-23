@@ -214,17 +214,21 @@ div[id^=gl-] {
     font-size: 20px;
     inset: 0;
     place-content: center;
+    pointer-events: none;
     text-transform: capitalize;
     z-index: 1;
   }
 
   input:checked + label {
-    pointer-events: none;
     z-index: 3;
   }
 
   input:checked + label + input + label,
   &:has(input:last-of-type:checked) label:first-of-type {
+    :has(#equip-pencil:checked) & {
+      pointer-events: all;
+    }
+
     z-index: 2;
   }
 }
@@ -352,15 +356,20 @@ div[id^=gl-] {
   transform-origin: center right;
   width: 257px;
 
+  li {
+    position: relative;
+  }
+
   li:nth-child(2)::before {
     border: 3px solid var(--color-red);
+    border-radius: 100%;
     content: "";
-    width: 20px;
-    height: 20px;
     display: block;
+    height: 24px;
+    left: -25px;
     position: absolute;
-    left: -22px;
-    border-radius: 100%
+    top: -3px;
+    width: 24px;
   }
 }
 
